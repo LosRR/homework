@@ -6,19 +6,25 @@
 */
 int GetNumber(string message)
 {
-    int result = 0
+    int result = 0;
     bool isCorrect = false;
     while (!isCorrect)
     {
         Console.WriteLine(message);
-        if(int.TryParse(Console.ReadLine(), out result) && result != 0)
+        if(int.TryParse(Console.ReadLine(), out result) && result > 1)
         {
             isCorrect = true;
         }
         else
         {
-            Console.WriteLine("Ввели некорректное число, введите число большее 1")
+            Console.WriteLine("Ввели некорректное число, введите число большее 1");
         }
     }
     return result;
+}
+int cube = GetNumber("введите число более 1");
+Console.WriteLine("Кубы чисел от 1 до введенного числа: ");
+for (int i = 1; i <= cube; i++)
+{
+   Console.WriteLine($"{Math.Pow(i,3)}, ");     
 }
