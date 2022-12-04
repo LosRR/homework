@@ -26,5 +26,5 @@ int cube = GetNumber("введите число более 1");
 Console.WriteLine("Кубы чисел от 1 до введенного числа: ");
 for (int i = 1; i <= cube; i++)
 {
-   Console.WriteLine($"{Math.Pow(i,3)}, ");     
+   Console.WriteLine($"{Math.Pow(i,3)}, ");
 }
